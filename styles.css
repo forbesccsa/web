@@ -1,0 +1,439 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8f0 100%);
+    color: #2c3e50;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.club-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #5a6c7d;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+    background: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.btn-secondary:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Social Media Buttons */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.facebook-btn {
+    background: #1877f2;
+    color: white;
+    border: none;
+}
+
+.facebook-btn:hover {
+    background: #166fe5;
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border: none;
+}
+
+.instagram-btn:hover {
+    box-shadow: 0 10px 20px rgba(225, 48, 108, 0.3);
+}
+
+/* Neon Button for Hackathon */
+.neon-button {
+    display: inline-block;
+    padding: 20px 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #27ae60;
+    border: 3px solid #27ae60;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    background: white;
+}
+
+.neon-button:hover {
+    background: #27ae60;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(39, 174, 96, 0.4);
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about {
+    padding: 100px 20px;
+    background: white;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Team Section */
+.team-section {
+    margin: 50px 0;
+}
+
+.team-section h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-image {
+    max-width: 100%;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8f0 100%);
+    color: #2c3e50;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: #2c3e50;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info strong {
+    color: #3498db;
+}
+
+/* Hackathon Page Specific */
+.hero-hackathon {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8f0 100%);
+}
+
+.hero-logo {
+    max-width: 100%;
+    width: 910px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* Code of Conduct */
+.code-of-conduct {
+    background: #f5f9fc;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px 0;
+    border-left: 5px solid #3498db;
+}
+
+.code-of-conduct h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.code-of-conduct ul {
+    list-style: none;
+    padding: 0;
+}
+
+.code-of-conduct li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e8ef;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.code-of-conduct li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.code-of-conduct li:last-child {
+    border-bottom: none;
+}
+
+.conduct-intro {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Event Schedule */
+.event-schedule {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.event-schedule h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.schedule-image {
+    max-width: 100%;
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #ecf0f1;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Scroll Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+.fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .club-logo {
+        width: 150px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .neon-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .team-image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .schedule-image {
+        width: 100%;
+    }
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .contact {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .code-of-conduct {
+        padding: 25px;
+    }
+
+    .neon-button {
+        width: 100%;
+        text-align: center;
+    }
+}
