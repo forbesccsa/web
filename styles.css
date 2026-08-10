@@ -143,6 +143,27 @@ body {
     box-shadow: 0 10px 20px rgba(225, 48, 108, 0.3);
 }
 
+.linkedin-btn {
+    background: #0077b5;
+    color: white;
+    border: none;
+}
+
+.linkedin-btn:hover {
+    background: #006097;
+    box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+}
+
+.tiktok-btn {
+    background: #000000;
+    color: white;
+    border: none;
+}
+
+.tiktok-btn:hover {
+    background: #1a1a1a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 /* Neon Button for Hackathon */
 .neon-button {
     display: inline-block;
