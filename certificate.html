@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Certificate - Forbes Cyber Crime & Security Awareness Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Certificate Page Styles */
+        .cert-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .cert-nav {
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .cert-nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cert-nav .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cert-nav .nav-home-btn {
+            color: white;
+            background: #3498db;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cert-nav .nav-home-btn:hover {
+            background: #2980b9;
+        }
+
+        .cert-content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cert-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .cert-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .cert-header p {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+
+        .cert-form-section {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .cert-form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .cert-form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .cert-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .cert-form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .cert-form-group input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .cert-form-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .cert-form-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        .certificate-template {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            border: 20px solid #2c3e50;
+            box-sizing: border-box;
+            background-image: 
+                radial-gradient(circle at 50% 50%, transparent 0%, transparent 40%, rgba(52, 152, 219, 0.1) 40%, rgba(52, 152, 219, 0.1) 60%, transparent 60%, transparent 100%),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(52, 152, 219, 0.05) 10px, rgba(52, 152, 219, 0.05) 20px);
+        }
+
+        .certificate-template::before,
+        .certificate_template::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+            z-index: 1;
+        }
+
+        .certificate-template::before {
+            top: -30px;
+            left: -30px;
+        }
+
+        .certificate_template::after {
+            bottom: -30px;
+            right: -30px;
+        }
+
+        .cert-logo-container {
+            margin-bottom: 30px;
+        }
+
+        .cert-logo {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            border: 4px solid #3498db;
+            padding: 5px;
+        }
+
+        .cert-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .cert-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .cert-body {
+            margin: 40px 0;
+        }
+
+        .cert-heading {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .cert-name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 30px 0;
+            padding: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .cert-description {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin: 30px 0;
+        }
+
+        .cert-signatures {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .cert-signature {
+            text-align: center;
+            width: 40%;
+        }
+
+        .cert-signature .line {
+            width: 100%;
+            height: 2px;
+            background: #2c3e50;
+            margin: 10px 0;
+        }
+
+        .cert-signature h4 {
+            font-size: 1rem;
+            color: #2c3e50;
+            margin: 10px 0 5px;
+        }
+
+        .cert-signature p {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .cert-seal {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #e74c3c 0%, #c0392b 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 5px solid #f1c40f;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cert-seal::before {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        .cert-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cert-download-btn {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .cert-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        .cert-reset-btn {
+            padding: 15px 30px;
+            background: #95a5a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+            display: none;
+        }
+
+        .cert-reset-btn:hover {
+            background: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .cert-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .certificate-template {
+                padding: 40px 30px;
+                border-width: 10px;
+            }
+
+            .cert-logo {
+                width: 80px;
+            }
+
+            .cert-title {
+                font-size: 2rem;
+            }
+
+            .cert-name {
+                font-size: 2.5rem;
+            }
+
+            .cert-signatures {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .cert-signature {
+                width: 100%;
+            }
+
+            .cert-seal {
+                bottom: 20px;
+                right: 20px;
+                width: 80px;
+                height: 80px;
+                font-size: 0.6rem;
+            }
+
+            .cert-seal::before {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .cert-footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+        }
+
+        .cert-footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .cert-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="cert-nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">CCSA</a>
+            <a href="index.html" class="nav-home-btn">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="cert-container">
+        <div class="cert-content">
+            <!-- Header -->
+            <div class="cert-header scroll-reveal">
+                <h1>Membership Certificate</h1>
+                <p>Official Recognition of CCSA Membership</p>
+            </div>
+
+            <!-- Input Form -->
+            <div class="cert-form-section scroll-reveal">
+                <h2>Enter Your Details</h2>
+                <form id="certificateForm">
+                    <div class="cert-form-group">
+                        <label for="memberName">Full Name</label>
+                        <input type="text" id="memberName" name="memberName" placeholder="Enter your full name" required>
+                    </div>
+                    <button type="submit" class="cert-form-btn">Generate Certificate</button>
+                </form>
+            </div>
+
+            <!-- Certificate Template -->
+            <div class="certificate-template scroll-reveal" id="certificateTemplate" style="display: none;">
+                <div class="cert-logo-container">
+                    <img src="logo.png" alt="CCSA Logo" class="cert-logo">
+                </div>
+                
+                <div class="cert-title">
+                    Certificate of Membership
+                </div>
+                
+                <div class="cert-subtitle">
+                    Forbes Cyber Crime & Security Awareness Club
+                </div>
+                
+                <div class="cert-body">
+                    <div class="cert-heading">
+                        This is to certify that
+                    </div>
+                    
+                    <div class="cert-name" id="certName">
+                        [Member Name]
+                    </div>
+                    
+                    <div class="cert-description">
+                        Has been actively contributing to the Forbes Cyber Crime and Security Awareness Club. 
+                        <br><br>
+                        Their dedication to promoting cybersecurity awareness and enhancing technical skills 
+                        has been truly commendable. This certificate acknowledges their commitment to 
+                        making the digital world safer for everyone.
+                    </div>
+                </div>
+                
+                <div class="cert-signatures">
+                    <div class="cert-signature">
+                        <div class="line"></div>
+                        <h4>Club President</h4>
+                        <p>Forbes CCSA</p>
+                    </div>
+                    <div class="cert-signature">
+                        <div class="line"></div>
+                        <h4>Events Coordinator</h4>
+                        <p>Forbes CCSA</p>
+                    </div>
+                </div>
+                
+                <div class="cert-seal">
+                    CCSA<br>OFFICIAL
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="cert-actions scroll-reveal" id="certActions" style="display: none;">
+                <a href="#" class="cert-download-btn" id="downloadCertBtn">
+                    📥 Download PDF Certificate
+                </a>
+                <button type="button" class="cert-reset-btn" id="resetCertBtn">
+                    Create Another
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="cert-footer">
+        <p>&copy; 2026 Forbes CCSA. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // Certificate Generator
+        document.getElementById('certificateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('memberName');
+            const certName = document.getElementById('certName');
+            const certTemplate = document.getElementById('certificateTemplate');
+            const certActions = document.getElementById('certActions');
+            const downloadBtn = document.getElementById('downloadCertBtn');
+            
+            if (nameInput.value.trim() !== '') {
+                // Update certificate with entered name
+                certName.textContent = nameInput.value.trim();
+                
+                // Show certificate and action buttons
+                certTemplate.style.display = 'block';
+                certActions.style.display = 'flex';
+                
+                // Setup download button with current name
+                const userName = nameInput.value.trim();
+                downloadBtn.href = '#';
+                downloadBtn.onclick = function() {
+                    downloadCertificate(userName);
+                };
+            }
+        });
+
+        // Reset button
+        document.getElementById('resetCertBtn').addEventListener('click', function() {
+            document.getElementById('memberName').value = '';
+            document.getElementById('certName').textContent = '[Member Name]';
+            document.getElementById('certificateTemplate').style.display = 'none';
+            document.getElementById('certActions').style.display = 'none';
+        });
+
+        // Download Certificate as PDF
+        function downloadCertificate(name) {
+            const element = document.getElementById('certificateTemplate');
+            const opt = {
+                margin: [0.5, 0.5],
+                filename: `CCSA_Membership_${name.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(function() {
+                alert(`Certificate for ${name} has been downloaded successfully!`);
+            }).catch(function(error) {
+                console.error('Error downloading certificate:', error);
+                alert('Failed to download certificate. Please try again.');
+            });
+        }
+
+        // Scroll Reveal Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            
+            const revealOnScroll = () => {
+                revealElements.forEach(element => {
+                    if (isElementInView(element)) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            // Initial check
+            revealOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', revealOnScroll);
+            
+            // Check if element is in view
+            function isElementInView(element) {
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+                
+                const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+                const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+                
+                return (vertInView && horInView);
+            }
+        });
+    </script>
+</body>
+</html>

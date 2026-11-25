@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Forbes Cyber Crime & Security Awareness Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="event-nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">CCSA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#suggest">Suggest Event</a></li>
+                <li><a href="#coordinate">Coordinate</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero events-hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Our Events</h1>
+            <p class="tagline fade-in">Latest, Upcoming, and Past Events</p>
+        </div>
+    </section>
+
+    <!-- Latest Events Section -->
+    <section class="events-section" id="events">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Latest Events</h2>
+            
+            <!-- Upcoming Events -->
+            <div class="events-grid">
+                <h3 class="scroll-reveal">Upcoming Events</h3>
+                <!---
+                <div class="event-card scroll-reveal">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Dec</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Cybersecurity Workshop 2026</h4>
+                        <p>Join us for an in-depth workshop on modern cybersecurity practices and threat detection techniques.</p>
+                        <div class="event-meta">
+                            <span class="location">📍 Forbes College Auditorium</span>
+                            <span class="time">🕒 10:00 AM - 3:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-primary event-btn">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="event-card scroll-reveal">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Dec</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Penetration Testing Demo</h4>
+                        <p>Hands-on demonstration of penetration testing tools and techniques used in ethical hacking.</p>
+                        <div class="event-meta">
+                            <span class="location">📍 CCSA Lab, Forbes College</span>
+                            <span class="time">🕒 2:00 PM - 5:00 PM</span>
+                        </div>
+                        <a href="#" class="btn btn-primary event-btn">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        -->
+            <!-- Past Events -->
+            <div class="past-events">
+                <h3 class="scroll-reveal">Past Events</h3>
+                
+                <div class="event-card past scroll-reveal">
+                    <div class="event-date">
+                        <span class="day">14-16</span>
+                        <span class="month">Aug</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Codefest Hackathon</h4>
+                        <p>Codefest provencial phase hackathon in collaboration with code for change Chitwan</p>
+                        <div class="event-meta">
+                            <span class="location">📍 Forbes College Premisis</span>
+                            <span class="time">3 Days of nostop code, crafting and fun </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card past scroll-reveal">
+                    <div class="event-date">
+                        <span class="day"></span>
+                        <span class="month">Nov</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <h4></h4>
+                        <p>3 Day Vulnability 101</p>
+                        <div class="event-meta">
+                            <span class="location">📍 Forbes College Room 501</span>
+                            <span class="time">🕒 7:00 AM - 1:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggest Event Section -->
+    <section class="suggest-event" id="suggest">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Suggest an Event</h2>
+            <p class="section-description scroll-reveal">Have an idea for a cybersecurity topic you'd like us to cover?</p>
+            
+            <form class="event-form scroll-reveal" id="suggestEventForm">
+                <div class="form-group">
+                    <label for="eventName">Event Title</label>
+                    <input type="text" id="eventName" name="eventName" required placeholder="Enter event topic name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventDescription">Description</label>
+                    <textarea id="eventDescription" name="eventDescription" rows="4" required placeholder="Describe the event topic and why it's important"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="suggesterName">Your Name</label>
+                        <input type="text" id="suggesterName" name="suggesterName" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="suggesterEmail">Email</label>
+                        <input type="email" id="suggesterEmail" name="suggesterEmail" required placeholder="Enter your email">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventCategory">Category</label>
+                    <select id="eventCategory" name="eventCategory" required>
+                        <option value="">Select category</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="seminar">Seminar</option>
+                        <option value="demo">Hands-on Demo</option>
+                        <option value="competition">Competition</option>
+                        <option value="guest_lecture">Guest Lecture</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary event-form-btn">Submit Suggestion</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Coordinate with Us Section -->
+    <section class="coordinate-section" id="coordinate">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Coordinate with Us</h2>
+            <p class="section-description scroll-reveal">Ready to collaborate on a cybersecurity event or initiative?</p>
+            
+            <div class="coordinate-content scroll-reveal">
+                <div class="contact-info-large">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <h4>Events Coordinator</h4>
+                            <p>📧 events.ccsa.forbes@gmail.com</p>
+                            <p>📞 +977-9876543210</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Club President</h4>
+                            <p>📧 president.ccsa@forbescollege.edu.np</p>
+                            <p>📞 +977-9876543211</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>General Inquiry</h4>
+                            <p>📧 ccsa@forbescollege.edu.np</p>
+                            <p>📞 +977-1234567890</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collab-form">
+                    <form id="coordinateForm">
+                        <div class="form-group">
+                            <label for="collabName">Your Organization/Name</label>
+                            <input type="text" id="collabName" name="collabName" required placeholder="Enter your name or organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="collabEmail">Email</label>
+                            <input type="email" id="collabEmail" name="collabEmail" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="collabType">Collaboration Type</label>
+                            <select id="collabType" name="collabType" required>
+                                <option value="">Select collaboration type</option>
+                                <option value="sponsored">Sponsorship</option>
+                                <option value="partner">Event Partner</option>
+                                <option value="speaker">Speaker/Instructor</option>
+                                <option value="resource">Resource Sharing</option>
+                                <option value="other">Other Collaboration</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="collabMessage">Message</label>
+                            <textarea id="collabMessage" name="collabMessage" rows="5" required placeholder="Describe your collaboration proposal"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary event-form-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Forbes CCSA. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('suggestEventForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Event suggestion submitted! We\'ll review it and get back to you soon.');
+            this.reset();
+        });
+
+        document.getElementById('coordinateForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Collaboration inquiry sent! We\'ll coordinate with you shortly.');
+            this.reset();
+        });
+
+        // Scroll Reveal Animation (same as index.html)
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            
+            const revealOnScroll = () => {
+                revealElements.forEach(element => {
+                    if (isElementInView(element)) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            
+            // Initial check
+            revealOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', revealOnScroll);
+            
+            // Check if element is in view
+            function isElementInView(element) {
+                const rect = element.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+                
+                const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+                const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+                
+                return (vertInView && horInView);
+            }
+        });
+    </script>
+</body>
+</html>

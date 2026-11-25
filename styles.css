@@ -458,3 +458,454 @@ footer p {
         text-align: center;
     }
 }
+/* Events Page Styles */
+
+/* Navigation */
+.event-nav {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.event-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.event-nav .nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.event-nav .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+.event-nav .nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.event-nav .nav-links a:hover {
+    color: #3498db;
+}
+
+.event-nav .nav-home-btn {
+    margin-left: 20px;
+}
+
+/* Events Hero */
+.events-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+}
+
+.events-hero .hero-content h1 {
+    color: white;
+}
+
+.events-hero .tagline {
+    color: #ecf0f1;
+}
+
+/* Events Section */
+.events-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.events-section .section-title {
+    margin-bottom: 60px;
+}
+
+.events-section .section-description {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.past-events {
+    margin-top: 60px;
+}
+
+.past-events h3 {
+    color: #7f8c8d;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Event Card */
+.event-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ecf0f1;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.event-card.past {
+    opacity: 0.8;
+}
+
+.event-card.past:hover {
+    transform: translateY(-3px);
+}
+
+.event-date {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-date .day {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event-date .year {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.event-content {
+    padding: 25px;
+    flex: 1;
+}
+
+.event-content h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.event-content p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #5a6c7d;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.event-btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Suggest Event Section */
+.suggest-event {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8f0 100%);
+}
+
+.suggest-event .section-title {
+    margin-bottom: 30px;
+}
+
+.suggest-event .section-description {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.event-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.event-form-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.event-form-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* Coordinate Section */
+.coordinate-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.coordinate-section .section-description {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.coordinate-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info-large {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.contact-info-large h3 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-item p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.contact-item p:last-child {
+    margin-bottom: 0;
+}
+
+.collab-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.collab-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-form .form-group {
+    margin-bottom: 20px;
+}
+
+.collab-form .form-group input,
+.collab-form .form-group select,
+.collab-form .form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.collab-form .form-group input:focus,
+.collab-form .form-group select:focus,
+.collab-form .form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.collab-form .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Responsive Design for Events Page */
+@media (max-width: 992px) {
+    .coordinate-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-nav {
+        padding: 10px 0;
+    }
+    
+    .event-nav .container {
+        flex-wrap: wrap;
+    }
+    
+    .event-nav .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    
+    .event-nav .nav-home-btn {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        min-width: auto;
+        padding: 15px;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .event-date .day {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-large {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .suggest-event,
+    .coordinate-section {
+        padding: 60px 20px;
+    }
+    
+    .event-form,
+    .collab-form {
+        padding: 25px;
+    }
+    
+    .event-card {
+        border-radius: 10px;
+    }
+}
+
+/* Additional Styles */
+.event-form-btn:hover,
+.collab-form .form-group button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
